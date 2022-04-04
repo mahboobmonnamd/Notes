@@ -18,3 +18,11 @@ Save and restart postfix
 ```sh
  sudo postfix stop && sudo postfix start
 ```
+
+For checking the status
+log stream --predicate  '(process == "smtpd") || (process == "smtp")' --info
+
+send test mail
+```
+date | mail -s "Test Email" test22@mailhog.localhost
+```
