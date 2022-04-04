@@ -26,3 +26,6 @@ send test mail
 ```
 date | mail -s "Test Email" test22@mailhog.localhost
 ```
+
+
+If docker container wants to access it use host as `host.docker.internal`
