@@ -1,0 +1,20 @@
+Install mailhog
+```
+brew install mailhog
+brew services start mailhog
+```
+
+```sh
+sudo nano /etc/postfix/main.cf
+```
+Add these lines at the bottom of the file
+
+# For MailHog
+myhostname = localhost
+relayhost = [127.0.0.1]:1025
+
+Save and restart postfix
+
+```sh
+ sudo postfix stop && sudo postfix start
+```
